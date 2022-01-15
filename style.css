@@ -17,10 +17,10 @@ main {
     height: 100vh;
     justify-content: center;
     position: relative;
-    margin: 20px;
+    margin: 15px 15px;
 } 
 
-#paginaInicial > button {
+#botao > button {
     background-color: #00BFFF;
     border: none;
     border-radius: 10px;
@@ -28,11 +28,10 @@ main {
     font-family: EuclidBold;
     font-size: 25px;
     font-weight: 500;
-    letter-spacing: 1px
+    letter-spacing:0.5px;
     line-height: 40px;
-    line-weight: 400
-    text-transform: uppercase;
     padding: 9px 23px;
+    text-transform: uppercase;
     margin: 15px 15px;
 }
 
