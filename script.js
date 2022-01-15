@@ -12,6 +12,16 @@ const nomeDoPersonagem3 = document.querySelector('#nome3');
 const especie3 = document.querySelector('#especie3');
 const condicao3 = document.querySelector('#condicao3');
 
+traduzirCondicao = (data) => {
+    if(data.status == 'unknown'){
+        return 'Não sabemos';
+    }else if(data.status == 'Alive'){
+        return 'Sim';
+    }else {
+        return 'Não. Está morto';
+    }
+}
+
 gerarValorAletorio = () => {
     return Math.floor(Math.random() * 671);
 }
@@ -37,7 +47,7 @@ pegarPersonagem = () => {
         imagem1.alt = data.name;
         nomeDoPersonagem1.innerHTML = data.name;
         especie1.innerHTML = data.species;
-        condicao1.innerHTML = data.status;
+        condicao1.innerHTML = traduzirCondicao(data);
     });
 }
 
@@ -54,7 +64,7 @@ pegarPersonagem2 = () => {
         imagem2.alt = data.name;
         nomeDoPersonagem2.innerHTML = data.name;
         especie2.innerHTML = data.species;
-        condicao2.innerHTML = data.status;
+        condicao2.innerHTML = traduzirCondicao(data);
     });
 }
 
@@ -71,7 +81,7 @@ pegarPersonagem3 = () => {
         imagem3.alt = data.name;
         nomeDoPersonagem3.innerHTML = data.name;
         especie3.innerHTML = data.species;
-        condicao3.innerHTML = data.status;
+        condicao3.innerHTML = traduzirCondicao(data);
     });
 }
 
