@@ -12,8 +12,21 @@ const nomeDoPersonagem3 = document.querySelector('#nome3');
 const especie3 = document.querySelector('#especie3');
 const condicao3 = document.querySelector('#condicao3');
 
+gerarValorAletorio = () => {
+    return Math.floor(Math.random() * 671);
+}
+
+gerarValorAletorio2 = () => {
+    return Math.floor(Math.random() * 671);
+}
+
+gerarValorAletorio3 = () => {
+    return Math.floor(Math.random() * 671);
+}
+
 pegarPersonagem = () => {
-    return fetch(`https://rickandmortyapi.com/api/character/2`, {
+    let numeroAleatorio = gerarValorAletorio();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
         method:'GET',
         headers: {
             Accept: 'application/json',
@@ -29,7 +42,8 @@ pegarPersonagem = () => {
 }
 
 pegarPersonagem2 = () => {
-    return fetch(`https://rickandmortyapi.com/api/character/1`, {
+    let numeroAleatorio2 = gerarValorAletorio2();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio2}`, {
         method:'GET',
         headers: {
             Accept: 'application/json',
@@ -45,7 +59,8 @@ pegarPersonagem2 = () => {
 }
 
 pegarPersonagem3 = () => {
-    return fetch(`https://rickandmortyapi.com/api/character/3`, {
+    let numeroAleatorio3 = gerarValorAletorio3();
+    return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio3}`, {
         method:'GET',
         headers: {
             Accept: 'application/json',
